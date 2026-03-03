@@ -3,144 +3,141 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SDS ENERGIE — Solutions énergétiques</title>
-  <meta name="description" content="SDS ENERGIE : solutions énergétiques pour particuliers et professionnels. Étude, installation, maintenance. Demandez un devis." />
+  <title>SDS ENERGIE — Bureau d’étude CVC</title>
+  <meta name="description" content="SDS ENERGIE — Bureau d’étude CVC : conception, dimensionnement, notes de calcul, pièces techniques. LE THILLAY (95500). Demandez un devis." />
   <style>
     :root{
-      --bg:#0b1220;
-      --card:#0f1a33;
-      --text:#eaf0ff;
-      --muted:#b9c6e6;
-      --accent:#21c07a;
-      --line:rgba(255,255,255,.12);
-      --shadow:0 12px 28px rgba(0,0,0,.35);
-      --radius:16px;
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#111111;
+      --muted:#4b5563;
+      --accent:#111111;
+      --line:rgba(0,0,0,.10);
+      --shadow:0 14px 40px rgba(0,0,0,.08);
+      --radius:18px;
       --max:1120px;
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       color:var(--text);
       background:
-        radial-gradient(1000px 600px at 10% 0%, rgba(33,192,122,.22), transparent 55%),
-        radial-gradient(900px 500px at 95% 10%, rgba(79,140,255,.20), transparent 55%),
+        radial-gradient(900px 520px at 15% 0%, rgba(0,0,0,.04), transparent 55%),
+        radial-gradient(900px 520px at 85% 10%, rgba(0,0,0,.03), transparent 55%),
         var(--bg);
     }
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:24px}
     header{
-      position:sticky;top:0;backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.6);
+      position:sticky;top:0;z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.86);
       border-bottom: 1px solid var(--line);
-      z-index:10;
     }
     .nav{
       display:flex;align-items:center;justify-content:space-between;gap:16px;
       max-width:var(--max);margin:0 auto;padding:14px 24px;
     }
-    .brand{
-      display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.4px
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.2px}
+    .logo-img{
+      height:44px;width:auto;object-fit:contain;display:block;
     }
-    .logo{
-      width:34px;height:34px;border-radius:10px;
-      background: linear-gradient(135deg, var(--accent), #4f8cff);
-      box-shadow: var(--shadow);
-    }
-    .navlinks{display:flex;gap:16px;align-items:center}
-    .navlinks a{opacity:.9}
+    .navlinks{display:flex;gap:18px;align-items:center}
+    .navlinks a{opacity:.85}
     .navlinks a:hover{opacity:1}
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
-      padding:10px 14px;border-radius:12px;border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
-      transition:.2s transform,.2s background;
+      padding:10px 14px;border-radius:12px;border:1px solid rgba(0,0,0,.16);
+      background:#fff;
+      transition:.2s transform,.2s background,.2s box-shadow;
       cursor:pointer;
     }
-    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.10)}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(0,0,0,.08)}
     .btn.primary{
-      background: linear-gradient(135deg, var(--accent), #4f8cff);
-      border: none;
-      color:#071021;
+      background: #111;
+      color:#fff;
+      border:1px solid #111;
       font-weight:800;
     }
 
-    .hero{padding:56px 0 26px}
+    .hero{padding:54px 0 24px}
     .grid{
       display:grid;
       grid-template-columns: 1.25fr .75fr;
-      gap:24px;
+      gap:22px;
       align-items:stretch;
     }
     @media (max-width: 920px){
       .grid{grid-template-columns:1fr}
       .navlinks{display:none}
     }
+
     .kicker{
       display:inline-flex;gap:8px;align-items:center;
       padding:8px 12px;border-radius:999px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
+      background: rgba(0,0,0,.03);
       color:var(--muted);
       font-size:13px;
     }
-    h1{margin:14px 0 10px;font-size:44px;line-height:1.08;letter-spacing:-.8px}
+    h1{margin:14px 0 10px;font-size:44px;line-height:1.08;letter-spacing:-1px}
     @media (max-width:520px){h1{font-size:36px}}
-    p{margin:0;color:var(--muted);line-height:1.65}
+    p{margin:0;color:var(--muted);line-height:1.7}
+
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+
     .card{
-      background: rgba(15,26,51,.74);
+      background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
     .card.pad{padding:18px}
+
     .stats{
       display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px
     }
     .stat{
       padding:14px;border-radius:14px;border:1px solid var(--line);
-      background: rgba(255,255,255,.05);
+      background: rgba(0,0,0,.03);
     }
-    .stat strong{display:block;font-size:18px}
+    .stat strong{display:block;font-size:18px;color:#111}
     .stat span{font-size:12px;color:var(--muted)}
 
     section{padding:26px 0}
     .section-title{display:flex;align-items:end;justify-content:space-between;gap:16px}
-    .section-title h2{margin:0;font-size:26px}
+    .section-title h2{margin:0;font-size:26px;letter-spacing:-.4px}
     .muted{color:var(--muted)}
-    .cards{
-      margin-top:14px;
-      display:grid;grid-template-columns:repeat(3,1fr);gap:14px
-    }
+    .cards{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     @media (max-width: 920px){.cards{grid-template-columns:1fr}}
+
     .service{
       padding:16px;border-radius:16px;border:1px solid var(--line);
-      background: rgba(255,255,255,.05);
+      background: rgba(0,0,0,.03);
       min-height:150px;
     }
-    .service h3{margin:8px 0 6px}
+    .service h3{margin:8px 0 6px;color:#111}
     .pill{
       display:inline-flex;align-items:center;gap:8px;
       font-size:12px;color:var(--muted);
       padding:6px 10px;border-radius:999px;border:1px solid var(--line);
-      background: rgba(0,0,0,.10);
+      background: rgba(255,255,255,.7);
     }
 
-    .two{
-      display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px
-    }
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
     @media (max-width: 920px){.two{grid-template-columns:1fr}}
     .list{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:10px}
     .list li{
       display:flex;gap:10px;align-items:flex-start;
       padding:12px;border-radius:14px;border:1px solid var(--line);
-      background: rgba(255,255,255,.05);
+      background: rgba(0,0,0,.03);
     }
     .dot{
       width:10px;height:10px;border-radius:50%;
-      background: var(--accent);margin-top:5px;flex:0 0 auto;
-      box-shadow: 0 0 0 4px rgba(33,192,122,.16);
+      background: #111;margin-top:6px;flex:0 0 auto;
+      box-shadow: 0 0 0 4px rgba(0,0,0,.08);
     }
 
     form{display:grid;gap:10px;margin-top:10px}
@@ -148,14 +145,19 @@
       width:100%;
       padding:12px 12px;
       border-radius:12px;
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.18);
-      color:var(--text);
+      border:1px solid rgba(0,0,0,.14);
+      background: rgba(255,255,255,.9);
+      color:#111;
       outline:none;
     }
     textarea{min-height:110px;resize:vertical}
     .small{font-size:12px;color:var(--muted);margin-top:8px}
-    footer{padding:28px 0;color:var(--muted);border-top:1px solid var(--line);margin-top:16px}
+
+    footer{
+      padding:22px 0;color:var(--muted);
+      border-top:1px solid var(--line);
+      margin-top:16px
+    }
   </style>
 </head>
 <body>
@@ -180,12 +182,14 @@
   <section class="hero">
     <div class="grid">
       <div>
-        <span class="kicker">⚡ Solutions énergétiques • Étude • Installation • Maintenance</span>
-        <h1>Optimisez votre énergie avec SDS ENERGIE</h1>
+        <span class="kicker">📐 Bureau d’étude CVC • Conception • Dimensionnement • Pièces techniques</span>
+        <h1>SDS ENERGIE<br/>Bureau d’étude CVC</h1>
         <p>
-          Nous accompagnons particuliers et professionnels avec des solutions fiables et adaptées :
-          conseil, mise en œuvre, suivi et maintenance. Objectif : performance, économies et sérénité.
+          Études, conception et dimensionnement CVC (Chauffage, Ventilation, Climatisation).
+          Nous accompagnons vos projets de la faisabilité à la production des pièces techniques,
+          avec une approche rigoureuse, claire et orientée performance.
         </p>
+
         <div class="hero-actions">
           <a class="btn primary" href="#contact">Obtenir un devis</a>
           <a class="btn" href="#services">Voir les services</a>
@@ -193,26 +197,26 @@
 
         <div class="stats">
           <div class="stat">
-            <strong>Rapide</strong>
-            <span>Réponse sous 24–48h</span>
+            <strong>Réactif</strong>
+            <span>Retour sous 24–48h</span>
           </div>
           <div class="stat">
-            <strong>Sur-mesure</strong>
-            <span>Étude & dimensionnement</span>
+            <strong>Rigueur</strong>
+            <span>Notes & dimensionnements</span>
           </div>
           <div class="stat">
-            <strong>Suivi</strong>
-            <span>Maintenance & assistance</span>
+            <strong>Projets</strong>
+            <span>Logements • Tertiaire</span>
           </div>
         </div>
       </div>
 
       <div class="card pad">
-        <h2 style="margin:0 0 8px">Devis gratuit</h2>
-        <p class="muted">Décrivez votre besoin. On vous recontacte rapidement.</p>
+        <h2 style="margin:0 0 8px;letter-spacing:-.4px">Demande de devis</h2>
+        <p class="muted">Décrivez votre besoin (programme, surfaces, délais). On vous recontacte rapidement.</p>
 
-        <!-- Formulaire simple (mailto). Remplace l'email ci-dessous. -->
-        <form action="mailto:contact@sds-energie.fr" method="post" enctype="text/plain">
+        <!-- Formulaire simple (mailto) -->
+        <form action="mailto:contact@sds-energie.com" method="post" enctype="text/plain">
           <input name="Nom" placeholder="Votre nom" required>
           <input name="Téléphone" placeholder="Téléphone">
           <input type="email" name="Email" placeholder="Email" required>
@@ -220,7 +224,7 @@
           <button class="btn primary" type="submit">Envoyer</button>
         </form>
         <div class="small">
-          Astuce : si vous n’avez pas encore d’email pro, remplacez <b>contact@sds-energie.fr</b> par votre adresse.
+          (Le formulaire “mailto” ouvre l’application mail du visiteur. Pour un formulaire 100% pro, je te mets une version Formspree gratuite si tu veux.)
         </div>
       </div>
     </div>
@@ -229,24 +233,26 @@
   <section id="services">
     <div class="section-title">
       <h2>Services</h2>
-      <div class="muted">Des solutions claires, un accompagnement complet.</div>
+      <div class="muted">Une production claire, exploitable chantier.</div>
     </div>
 
     <div class="cards">
       <div class="service card">
-        <span class="pill">🔍 Étude & conseil</span>
-        <h3>Audit et dimensionnement</h3>
-        <p>Analyse de vos besoins, recommandations, estimation des gains et plan d’action.</p>
+        <span class="pill">📐 Bureau d’étude CVC</span>
+        <h3>Conception & dimensionnement</h3>
+        <p>Études de conception, dimensionnement des installations CVC, optimisation énergétique et cohérence technique.</p>
       </div>
+
       <div class="service card">
-        <span class="pill">🛠️ Installation</span>
-        <h3>Mise en œuvre</h3>
-        <p>Installation soignée, sécurité, conformité, tests et mise en service.</p>
+        <span class="pill">🧮 Calcul & pièces techniques</span>
+        <h3>Notes de calcul</h3>
+        <p>Bilans, notes de calcul, synoptiques et pièces techniques nécessaires aux validations (MOE / BC).</p>
       </div>
+
       <div class="service card">
-        <span class="pill">🧰 Maintenance</span>
-        <h3>Suivi & dépannage</h3>
-        <p>Contrôles, entretien, intervention rapide et optimisation dans le temps.</p>
+        <span class="pill">🏢 Assistance projet</span>
+        <h3>Accompagnement</h3>
+        <p>Assistance technique, échanges, mise au point, ajustements, et support pendant l’avancement du projet.</p>
       </div>
     </div>
   </section>
@@ -259,26 +265,24 @@
 
     <div class="two">
       <div class="card pad">
-        <h3 style="margin:0 0 6px">Notre engagement</h3>
+        <h3 style="margin:0 0 6px;letter-spacing:-.3px">Notre approche</h3>
         <p>
-          SDS ENERGIE vous aide à choisir la solution la plus adaptée (technique, budget, délais),
-          avec un accompagnement de bout en bout et des conseils simples à comprendre.
+          SDS ENERGIE privilégie une méthode de travail structurée : hypothèses explicites,
+          livrables propres, et échanges simples pour avancer vite sans zones grises.
         </p>
         <ul class="list">
-          <li><span class="dot"></span><div><b>Devis clair</b><div class="muted">Une proposition lisible, sans surprise.</div></div></li>
-          <li><span class="dot"></span><div><b>Qualité d’exécution</b><div class="muted">Finitions propres et respect des normes.</div></div></li>
-          <li><span class="dot"></span><div><b>Service après-vente</b><div class="muted">Disponibilité et suivi.</div></div></li>
+          <li><span class="dot"></span><div><b>Livrables exploitables</b><div class="muted">Plans / notes / synoptiques clairs.</div></div></li>
+          <li><span class="dot"></span><div><b>Rigueur & conformité</b><div class="muted">Cohérence technique et suivi.</div></div></li>
+          <li><span class="dot"></span><div><b>Réactivité</b><div class="muted">Réponses rapides et point de blocage traité.</div></div></li>
         </ul>
       </div>
 
       <div class="card pad">
-        <h3 style="margin:0 0 6px">Zone d’intervention</h3>
-        <p class="muted">
-          Indique ici ta zone (ex: Île-de-France, Lyon et alentours, etc.).
-        </p>
-        <div style="margin-top:12px;padding:14px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.05)">
-          📍 <b>Ville / Région</b><br/>
-          <span class="muted">Ex : Paris, 50 km autour</span>
+        <h3 style="margin:0 0 6px;letter-spacing:-.3px">Localisation</h3>
+        <p class="muted">Basé à :</p>
+        <div style="margin-top:12px;padding:14px;border-radius:14px;border:1px solid var(--line);background:rgba(0,0,0,.03)">
+          📍 <b>LE THILLAY (95500)</b><br/>
+          <span class="muted">Interventions et études selon projet.</span>
         </div>
 
         <div style="margin-top:12px">
@@ -291,25 +295,22 @@
   <section id="contact">
     <div class="section-title">
       <h2>Contact</h2>
-      <div class="muted">Réponse rapide • Devis gratuit</div>
+      <div class="muted">Réponse rapide • Devis</div>
     </div>
 
     <div class="two">
       <div class="card pad">
-        <h3 style="margin:0 0 6px">Coordonnées</h3>
-        <p class="muted">Remplace avec tes infos :</p>
+        <h3 style="margin:0 0 6px;letter-spacing:-.3px">Coordonnées</h3>
         <ul class="list">
-          <li><span class="dot"></span><div><b>Téléphone</b><div class="muted">06 00 00 00 00</div></div></li>
-          <li><span class="dot"></span><div><b>Email</b><div class="muted">contact@sds-energie.fr</div></div></li>
-          <li><span class="dot"></span><div><b>Adresse</b><div class="muted">Ville, France</div></div></li>
+          <li><span class="dot"></span><div><b>Téléphone</b><div class="muted">06.17.63.35.03</div></div></li>
+          <li><span class="dot"></span><div><b>Email</b><div class="muted">contact@sds-energie.com</div></div></li>
+          <li><span class="dot"></span><div><b>Adresse</b><div class="muted">LE THILLAY 95500</div></div></li>
         </ul>
-        <p class="small">Tu peux aussi ajouter tes horaires et ton numéro SIRET si tu veux.</p>
       </div>
 
       <div class="card pad">
-        <h3 style="margin:0 0 6px">Message rapide</h3>
-        <p class="muted">Même formulaire que plus haut (tu peux en garder un seul).</p>
-        <form action="mailto:contact@sds-energie.fr" method="post" enctype="text/plain">
+        <h3 style="margin:0 0 6px;letter-spacing:-.3px">Message rapide</h3>
+        <form action="mailto:contact@sds-energie.com" method="post" enctype="text/plain">
           <input name="Nom" placeholder="Votre nom" required>
           <input type="email" name="Email" placeholder="Email" required>
           <textarea name="Message" placeholder="Votre message" required></textarea>
@@ -322,7 +323,9 @@
   <footer class="wrap">
     <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
       <div>© <span id="y"></span> SDS ENERGIE. Tous droits réservés.</div>
-      <div class="muted">Site gratuit • HTML</div>
+      <div class="muted">
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
     </div>
   </footer>
 
